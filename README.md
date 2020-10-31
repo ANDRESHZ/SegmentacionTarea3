@@ -3,7 +3,8 @@ Trabajo de segmentación  Tarea 3 - Procesamiento Avanzado de imagenes
 Segmentación de objetos: Diseño e implementación 
 Clase: 
 >Procesamiento Avanzado de Imágenes IEE3784 / IIC3783 PUC II-2020
- En el archivo **TAREA3.m** Encontraran el código comentariado para cada método estático usado, solo basta con EJECUTAR Y VER LA MAGIA, el archivo guardar video pueden geenrar las secuancias de imagenes que deseen.
+
+En el archivo **TAREA3.m** Encontraran el código comentariado para cada método estático usado, solo basta con EJECUTAR Y VER LA MAGIA, el archivo guardar video pueden geenrar las secuancias de imagenes que deseen.
 
 # IMPORTANTE INLCUIR LOS PATHS, Y SI ESPOSIBLE CAMBIAR EL PATH DE EJECUCIÓN DE MATLAB AL DE LA CARPETA DONDE DESCARGUEN LOS DOCUMENTOS.
 
