@@ -37,6 +37,19 @@ C02tFILT=zeros(79,79,N);
 for im=1:N %% filtramos identicamente a todas la imagenes
     C02tFILT(:,:,im)=imnlmfilt(C02tN(:,:,im),'ComparisonWindowSize',3,'SearchWindowSize',21,"DegreeOfSmoothing",0.02);
 end
+%% MIRANDO INFO
+
+MINIMAL=min(min(C02t{3}));
+MAXIMUN=max(max(C02t{3}));
+C02tNN=(C02t{3}-MINIMAL)/(MAXIMUN-MINIMAL);
+CN=(C02tNN<=(-MINIMAL/(MAXIMUN-MINIMAL))).*C02tNN;
+CN2=(C02tNN>(-MINIMAL/(MAXIMUN-MINIMAL))).*C02tNN;
+% CN2=(C02tNN>0.45).*C02tNN;
+xfilt2=imnlmfilt(CN2,'ComparisonWindowSize',3,'SearchWindowSize',21,"DegreeOfSmoothing",0.02);
+xfilt=imnlmfilt(CN,'ComparisonWindowSize',3,'SearchWindowSize',21,"DegreeOfSmoothing",0.02);
+xfiltORG=imnlmfilt(C02tNN,'ComparisonWindowSize',3,'SearchWindowSize',21,"DegreeOfSmoothing",0.02);
+imshow([C02tNN CN CN2; xfiltORG xfilt xfilt2],[],'InitialMagnification',1024)
+
 %% Calculos de PSF basado en la imagen ON-line o Movil.
 % imwrite(x,"Evidencias\x1.bmp")
 [i, j] = find(ismember(x, max(x(:))));
